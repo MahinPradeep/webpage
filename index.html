@@ -2,67 +2,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Interactive Website</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnimeVerse</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <nav>
+    <h2>Anime<span>Verse</span></h2>
+    <input type="text" id="search" placeholder="Search anime...">
+    <a href="#home">Home</a>
+    <a href="#anime">Explore</a>
+  </nav>
 
-    <header>
-        <h1>My Interactive Website</h1>
+  <header id="home">
+    <div class="hero">
+      <p class="tag">YOUR ANIME WORLD</p>
+      <h1>Enter The World<br>Of <span>Anime.</span></h1>
+      <p>Discover legendary stories, unforgettable heroes, and epic adventures.</p>
+      <a href="#anime" class="btn">Explore Anime ↗</a>
+    </div>
+  </header>
 
-        <button id="themeBtn">🌙 Dark Mode</button>
+  <main id="anime">
+    <h2>Trending <span>Anime</span></h2>
+    <div class="cards" id="animeCards">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=500" alt="Anime artwork">
+        <div><h3>Anime Dreams</h3><p>Adventure • Fantasy</p></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1614583225154-5fcdda07019e?w=500" alt="Anime inspired artwork">
+        <div><h3>Shadow Realm</h3><p>Action • Mystery</p></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=500&sat=-50" alt="Illustrated character artwork">
+        <div><h3>Moonlight</h3><p>Drama • Fantasy</p></div>
+      </article>
+    </div>
+    <p id="empty" hidden>No anime found. Try another search!</p>
+  </main>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="card">
-            <h2>Welcome!</h2>
-            <p id="message">
-                Welcome! Click the button to get started.
-            </p>
-
-            <button id="messageBtn">Click Me!</button>
-        </section>
-
-        <section id="about" class="card">
-            <h2>Interactive Counter</h2>
-
-            <p>Count: <span id="count">0</span></p>
-
-            <button id="addBtn">Add +1</button>
-            <button id="resetBtn">Reset</button>
-        </section>
-
-        <section id="contact" class="card">
-            <h2>Contact Me</h2>
-
-            <form id="contactForm">
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="Enter your name"
-                    required
-                >
-
-                <button type="submit">Submit</button>
-            </form>
-
-            <p id="formMessage"></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 My Interactive Website</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <footer>© 2026 AnimeVerse · Made for anime lovers ✦</footer>
+  <script src="script.js"></script>
 </body>
 </html>
